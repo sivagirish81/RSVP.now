@@ -1,0 +1,147 @@
+{
+    "info": {
+      "name": "RSVP Service API",
+      "description": "Postman collection for testing the RSVP Service APIs",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create or Update RSVP",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"eventId\": 1,\n  \"userId\": 101,\n  \"status\": \"Yes\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/rsvp",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "rsvp"]
+          }
+        }
+      },
+      {
+        "name": "Cancel RSVP",
+        "request": {
+          "method": "DELETE",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/rsvp/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "rsvp", "1"]
+          }
+        }
+      },
+      {
+        "name": "Add Event",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Tech Conference\",\n  \"capacity\": 100\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/events",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "events"]
+          }
+        }
+      },
+      {
+        "name": "Get RSVP Counts",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/rsvp-counts?eventId=1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "rsvp-counts"],
+            "query": [
+              {
+                "key": "eventId",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Get All RSVPs",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/rsvps?eventId=1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "rsvps"],
+            "query": [
+              {
+                "key": "eventId",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Update RSVP",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"eventId\": 1,\n  \"userId\": 101,\n  \"status\": \"No\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/rsvp",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "rsvp"]
+          }
+        }
+      }
+    ]
+  }
