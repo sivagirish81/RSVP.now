@@ -1,0 +1,27 @@
+{
+  "name": "rsvp-service",
+  "version": "1.0.0",
+  "description": "A scalable RSVP service allowing multiple users to RSVP for an event with limited seating.",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node dist/app.js", 
+    "dev": "nodemon src/app.ts", 
+    "build": "tsc",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "@types/pg": "^8.11.13",
+    "nodemon": "^2.0.4",
+    "typescript": "^5.8.3",
+    "ts-node": "^10.9.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
