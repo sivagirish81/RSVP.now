@@ -20,7 +20,6 @@ A scalable RSVP service that allows multiple users to RSVP for events with limit
     - [3. **Scalable Architecture**](#3-scalable-architecture)
     - [4. **Error Handling**](#4-error-handling)
     - [5. **Type Safety**](#5-type-safety)
-    - [6. **Caching (Optional)**](#6-caching-optional)
   - [API Endpoints](#api-endpoints)
     - [1. **Create or Update RSVP**](#1-create-or-update-rsvp)
     - [2. **Cancel RSVP**](#2-cancel-rsvp)
@@ -93,9 +92,6 @@ RSVP.now is a backend service designed to manage RSVPs for events. It supports f
 
 ### 5. **Type Safety**
 - TypeScript is used throughout the project to enforce type safety, reducing runtime errors and improving developer productivity.
-
-### 6. **Caching (Optional)**
-- Redis can be integrated for caching frequently accessed data, such as RSVP counts, to improve performance.
 
 ---
 
